@@ -10,14 +10,14 @@ namespace BE.Data.Entities
     public class Rate
     {
         [Key]
-        public int ID;
-        public String Username;
-        public String ProductId;
-        public DateTime Date;
-        public int RatingPoint;
+        public int ID { get; set; }
+        public String Username { get; set; }
+        public String ProductId { get; set; }
+        public DateTime Date { get; set; }
+        public int RatingPoint { get; set; }
         [ForeignKey("ProductId")]
-        public Product Product;
+        public Product Product { get; set; }
         [ForeignKey("Username")]
-        public User User;
+        public User User { get; set; }
     }
 }

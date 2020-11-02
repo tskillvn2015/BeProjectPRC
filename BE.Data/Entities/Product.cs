@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,16 +9,18 @@ namespace BE.Data.Entities
     public class Product
     {
         [Key]
-        public String productID;
-        public String phoneName;
-        public int year;
-        public String imageURL;
-        public String imageName;
-        public int quantity;
-        public double price;
-        public String manufactor;
-        public String description;
-        public float ratingPoint;
-        public bool status;
+        public String ProductID;
+        public String ProductName;
+        public int Year;
+        public String ImageURL;
+        public String ImageName;
+        public int Quantity;
+        public double Price;
+        public String Manufactor;
+        public String Description;
+        public bool Status;
+        public List<ItemLine> ListItemLine;
+        public List<PriceByTime> ListPriceByTime;
+        public List<Rate> ListRate;
     }
 }

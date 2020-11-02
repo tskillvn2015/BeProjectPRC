@@ -10,24 +10,29 @@ namespace BE.Data.Entities
     public class User
     {
         [Key]
-        public String username;
+        public String Username;
 
-        public String address;
+        public String Address;
 
-        public String birthday;
+        public String Birthday;
 
-        public String description;
+        public String Description;
 
-        public String email;
+        public String Email;
 
-        public String fullname;
+        public String Fullname;
 
-        public String password;
+        public String Password;
 
-        public String phone;
+        public String Phone;
 
-        public int roleId;
+        public int RoleId;
 
-        public bool status;
+        public bool Status;
+
+        [ForeignKey("RoleId")]
+        public Role Role;
+
+        public List<Order> ListOrder;
     }
 }
