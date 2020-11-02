@@ -10,9 +10,9 @@ namespace BE.Data.Entities
     public class UserSearchBehaviour
     {
         [Key]
-        public int Id;
-        public String Username;
-        public String SearchValue;
-        public String Date;
+        public int Id { get; set; }
+        public String Username { get; set; }
+        public String SearchValue { get; set; }
+        public String Date { get; set; }
     }
 }

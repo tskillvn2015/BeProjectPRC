@@ -10,13 +10,15 @@ namespace BE.Data.Entities
     public class Order
     {
         [Key]
-        public String orderId;
-        public String username;
-        public String phoneNumber;
-        public String address;
-        public String creationDate;
-        public List<ItemLine> listItem;
-        public String description;
-        public int status;
+        public int OrderId;
+        public String Username;
+        public String PhoneNumber;
+        public String Address;
+        public String CreationDate;
+        public String Description;
+        public int Status;
+        public List<ItemLine> ListItem;
+        [ForeignKey("Username")]
+        public User User;
     }
 }

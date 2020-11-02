@@ -6,13 +6,14 @@ using System.Text;
 
 namespace BE.Data.Entities
 {
-    [Table("UserSearchBehaviour")]
-    public class UserSearchBehaviour
+    [Table("Role")]
+    public class Role
     {
         [Key]
         public int Id;
-        public String Username;
-        public String SearchValue;
-        public String Date;
+        public String Name;
+        public String Description;
+        public String Permission;
+        public String Status;
     }
 }

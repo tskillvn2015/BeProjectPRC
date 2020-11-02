@@ -1,4 +1,5 @@
 ﻿using BE.Data.Entities;
+using EShop.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,14 @@ namespace BE.Data.EF
     {
         public EShopDbContext(DbContextOptions options) : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ItemLineConfiguration());
+            modelBuilder.ApplyConfiguration(new PriceByTimeConfiguration());
+
+            //base.OnModelCreating(modelBuilder);
         }
 
 
